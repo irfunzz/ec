@@ -5,6 +5,14 @@ onload = () => {
         clearTimeout(c);
     }, 1000);
 
+    // Intro Text Animation
+    const introText = document.querySelector('.intro-text');
+
+    // Show intro text after 1 second
+    setTimeout(() => {
+        introText.classList.add('show');
+    }, 1000);
+
     // Background Music Control
     const bgMusic = document.getElementById('bgMusic');
     const musicToggle = document.getElementById('musicToggle');
@@ -41,14 +49,14 @@ onload = () => {
         isPlaying = !isPlaying;
     });
 
-    // Show photos after flowers bloom (5 seconds)
+    // Show photos after intro text and flowers bloom (9 seconds)
     const photoGallery = document.querySelector('.photo-gallery');
     const anniversaryTitle = document.querySelector('.anniversary-title');
 
     setTimeout(() => {
         photoGallery.classList.add('show');
         anniversaryTitle.classList.add('show');
-    }, 5000);
+    }, 9000);
 
     // Photo enlargement functionality
     const photos = document.querySelectorAll('.photo-polaroid');
